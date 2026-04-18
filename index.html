@@ -11,13 +11,15 @@ body{font-family:'Century Gothic',Century Gothic,CenturyGothic,AppleGothic,sans-
 .header h1{font-size:22px;font-weight:600;color:#2E4057;margin-bottom:4px}
 .header p{font-size:13px;color:#999}
 .card{max-width:680px;margin:0 auto;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 16px rgba(0,0,0,.1)}
-.item{display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-bottom:.5px solid #eee;text-decoration:none;color:#222;transition:background .15s}
+.item{display:flex;align-items:center;justify-content:space-between;padding:10px 18px;border-bottom:.5px solid #eee;text-decoration:none;color:#222;transition:background .15s;gap:12px}
 .item:last-child{border-bottom:none}
 .item:hover{background:#f5f5f0}
-.item-left{display:flex;align-items:center;gap:12px}
-.sku{display:inline-block;background:#2E4057;color:#fff;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;min-width:44px;text-align:center;letter-spacing:.03em}
-.titulo{font-size:14px;font-weight:500;color:#1a1a1a}
-.arrow{color:#ccc;font-size:18px}
+.item-left{display:flex;align-items:center;gap:12px;flex:1;min-width:0}
+.thumb{width:60px;height:44px;object-fit:cover;border-radius:4px;flex-shrink:0;background:#e8e4dc}
+.thumb-placeholder{width:60px;height:44px;border-radius:4px;flex-shrink:0;background:#e8e4dc}
+.sku{display:inline-block;background:#2E4057;color:#fff;font-size:11px;font-weight:600;padding:2px 8px;border-radius:4px;min-width:44px;text-align:center;letter-spacing:.03em;flex-shrink:0}
+.titulo{font-size:14px;font-weight:500;color:#1a1a1a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.arrow{color:#ccc;font-size:18px;flex-shrink:0}
 </style>
 </head>
 <body>
@@ -26,19 +28,19 @@ body{font-family:'Century Gothic',Century Gothic,CenturyGothic,AppleGothic,sans-
   <p>Seleccione un mapa para ver su ficha completa</p>
 </div>
 <div class="card">
-  <a class="item" href="ficha_139.html"><div class="item-left"><span class="sku">139</span><span class="titulo">Inglaterra dividida en 5 partes y 52 condados</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_140.html"><div class="item-left"><span class="sku">140</span><span class="titulo">Irlanda dividida en provincias</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_175.html"><div class="item-left"><span class="sku">175</span><span class="titulo">Mapa ANDALUZIA</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_219.html"><div class="item-left"><span class="sku">219</span><span class="titulo">Carte de la partie Septentrionale d'Afrique ou de la Barbarie</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_574.html"><div class="item-left"><span class="sku">574</span><span class="titulo">América meridional</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_575.html"><div class="item-left"><span class="sku">575</span><span class="titulo">Estrecho de Gibraltar</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_576.html"><div class="item-left"><span class="sku">576</span><span class="titulo">Vista de Gibraltar</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_580.html"><div class="item-left"><span class="sku">580</span><span class="titulo">ARGENTINA — Estrecho de Le Maire</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_581.html"><div class="item-left"><span class="sku">581</span><span class="titulo">Mapa Mundi Hérisson</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_582.html"><div class="item-left"><span class="sku">582</span><span class="titulo">Australia polo sur</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_583.html"><div class="item-left"><span class="sku">583</span><span class="titulo">Mapa Río de la Plata</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_584.html"><div class="item-left"><span class="sku">584</span><span class="titulo">Mapa de la Guyana</span></div><span class="arrow">›</span></a>
-  <a class="item" href="ficha_585.html"><div class="item-left"><span class="sku">585</span><span class="titulo">Mapa de Malvinas</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_139.html"><div class="item-left"><img class="thumb" src="2.jpg" alt="139"><span class="sku">139</span><span class="titulo">Inglaterra dividida en 5 partes y 52 condados</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_140.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">140</span><span class="titulo">Irlanda dividida en provincias</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_175.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">175</span><span class="titulo">Mapa ANDALUZIA</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_219.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">219</span><span class="titulo">Carte de la partie Septentrionale d'Afrique ou de la Barbarie</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_574.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">574</span><span class="titulo">América meridional</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_575.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">575</span><span class="titulo">Estrecho de Gibraltar</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_576.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">576</span><span class="titulo">Vista de Gibraltar</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_580.html"><div class="item-left"><img class="thumb" src="580-1.jpg" alt="580"><span class="sku">580</span><span class="titulo">ARGENTINA — Estrecho de Le Maire</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_581.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">581</span><span class="titulo">Mapa Mundi Hérisson</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_582.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">582</span><span class="titulo">Australia polo sur</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_583.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">583</span><span class="titulo">Mapa Río de la Plata</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_584.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">584</span><span class="titulo">Mapa de la Guyana</span></div><span class="arrow">›</span></a>
+  <a class="item" href="ficha_585.html"><div class="item-left"><div class="thumb-placeholder"></div><span class="sku">585</span><span class="titulo">Mapa de Malvinas</span></div><span class="arrow">›</span></a>
 </div>
 </body>
 </html>
