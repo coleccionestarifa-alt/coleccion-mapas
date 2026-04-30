@@ -116,5 +116,22 @@ mainImg.addEventListener('mousemove',(e)=>{const r=mainImg.getBoundingClientRect
 document.addEventListener('keydown',e=>{if(e.key==='ArrowLeft')move(-1);if(e.key==='ArrowRight')move(1);if(e.key==='Escape')closeLightbox();});
 setMain(0);
 </script>
-<div style="text-align:center;padding:28px 0 36px"><a href="https://coleccionestarifa-alt.github.io/coleccion-mapas/" style="display:inline-block;text-decoration:none;background:#2E4057;color:#fff;font-family:Century Gothic,AppleGothic,sans-serif;font-size:11px;font-weight:600;padding:2px 14px;border-radius:6px;letter-spacing:.03em">Volver al índice</a></div></body>
+<div id="nav-bar" style="text-align:center;padding:28px 0 36px;display:flex;justify-content:center;gap:10px;align-items:center">
+<a id="nav-prev" href="#" style="display:inline-block;text-decoration:none;background:#2E4057;color:#fff;font-family:Century Gothic,AppleGothic,sans-serif;font-size:11px;font-weight:600;padding:2px 14px;border-radius:6px;letter-spacing:.03em">&#8249;</a>
+<a href="https://coleccionestarifa-alt.github.io/coleccion-mapas/" style="display:inline-block;text-decoration:none;background:#2E4057;color:#fff;font-family:Century Gothic,AppleGothic,sans-serif;font-size:11px;font-weight:600;padding:2px 14px;border-radius:6px;letter-spacing:.03em">Volver al índice</a>
+<a id="nav-next" href="#" style="display:inline-block;text-decoration:none;background:#2E4057;color:#fff;font-family:Century Gothic,AppleGothic,sans-serif;font-size:11px;font-weight:600;padding:2px 14px;border-radius:6px;letter-spacing:.03em">&#8250;</a>
+</div>
+<script>
+(function(){
+  var skus = [139, 140, 175, 219, 230, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614];
+  var current = parseInt(window.location.pathname.split('ficha_')[1]);
+  var idx = skus.indexOf(current);
+  var prev = document.getElementById('nav-prev');
+  var next = document.getElementById('nav-next');
+  if(idx <= 0){ prev.style.opacity='0.3'; prev.href='#'; prev.onclick=function(){return false;}; }
+  else{ prev.href='ficha_'+skus[idx-1]+'.html'; }
+  if(idx >= skus.length-1){ next.style.opacity='0.3'; next.href='#'; next.onclick=function(){return false;}; }
+  else{ next.href='ficha_'+skus[idx+1]+'.html'; }
+})();
+</script></body>
 </html>
